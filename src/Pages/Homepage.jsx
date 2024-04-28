@@ -61,8 +61,8 @@ const Homepage = () => {
           localStorage.setItem("date", day);
         }
       } else {
-        const stored = localStorage.getItem("randomID");
-        const pokemon = await fetchPokemonByID(stored);
+        const storedIdInLocal = localStorage.getItem("randomID");
+        const pokemon = await fetchPokemonByID(storedIdInLocal);
         if (pokemon) {
           setRandomPokemon(pokemon);
         }
